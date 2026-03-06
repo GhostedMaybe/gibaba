@@ -44,21 +44,22 @@
 
   <script>
     function startGame() {
-      document.getElementById("game").style.display = "block";
-      document.getElementById("startButton").style.display = "none";
+  document.getElementById("game").style.display = "block";
+  document.getElementById("startButton").style.display = "none";
 
-      EJS_player = "#game";
-      EJS_core = "gba";
-      EJS_gameName = "Pokemon Yu-Gi-Oh";
-      EJS_color = "#000000";
-      EJS_startOnLoaded = true;
-      EJS_pathtodata = "https://cdn.emulatorjs.org/latest/data/";
-      EJS_gameUrl = "./Pokemon-YuGiOh.gba";
+  EJS_player = "#game";
+  EJS_core = "gba";
+  EJS_gameName = "Pokemon Yu-Gi-Oh";
+  EJS_color = "#000000";
+  EJS_startOnLoaded = true;
 
-      const script = document.createElement("script");
-      script.src = "https://cdn.emulatorjs.org/latest/data/loader.js";
-      document.body.appendChild(script);
-    }
+  EJS_pathtodata = "https://cdn.emulatorjs.org/latest/data/";
+  EJS_gameUrl = "./Pokemon-YuGiOh.gba";
+
+  const script = document.createElement("script");
+  script.src = "https://cdn.emulatorjs.org/latest/data/loader.js";
+  document.body.appendChild(script);
+}
 
     document.getElementById("startButton").addEventListener("click", startGame);
   </script>
