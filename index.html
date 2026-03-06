@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pokemon Yu-Gi-Oh</title>
+  <style>
+    body {
+      margin: 0;
+      background: black;
+      overflow: hidden;
+      font-family: Arial, sans-serif;
+    }
+
+    .wrap {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+    }
+
+    #game {
+      display: none;
+      width: 100vw;
+      height: 100vh;
+    }
+
+    #startButton {
+      padding: 14px 24px;
+      font-size: 18px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div id="game"></div>
+    <button id="startButton">PLAY</button>
+  </div>
+
+  <script>
+    function startGame() {
+      document.getElementById("game").style.display = "block";
+      document.getElementById("startButton").style.display = "none";
+
+      EJS_player = "#game";
+      EJS_core = "gba";
+      EJS_gameName = "Pokemon Yu-Gi-Oh";
+      EJS_color = "#000000";
+      EJS_startOnLoaded = true;
+      EJS_pathtodata = "https://cdn.emulatorjs.org/latest/data/";
+      EJS_gameUrl = "./Pokemon-YuGiOh.gba";
+
+      const script = document.createElement("script");
+      script.src = "https://cdn.emulatorjs.org/latest/data/loader.js";
+      document.body.appendChild(script);
+    }
+
+    document.getElementById("startButton").addEventListener("click", startGame);
+  </script>
+</body>
+</html>
